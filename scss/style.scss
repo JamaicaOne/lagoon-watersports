@@ -1,0 +1,558 @@
+// Lagoon Watersports & Tours 
+//importing media query responsive min
+@import "masterstyles";
+
+$height: 0.00em;
+$GalaxySIII: 22.50em; //360px
+$iPhone-6-8-Port: 23.000em;  //23.438em 375px
+$iPhone-6-8-PlusPort: 25.750em;  //414px really 412 = 25.750en
+// $iPhone-4-Land: 28.000em;  //30em 480px
+// $iPhone-5-Land: 35.500em;  //568px
+// $Nexus7-Port: 37.500em; //600px
+// $GalaxyNmore-Land: 40.000em;  //640px
+// $iPhone-6-8-Land: 41.6875em;  //667px wide
+
+$iPad_iPadMini-Port: 48.000em; //768px
+// $iPhoneXland_or_KindlePort: 50.000em; //800px or 812px iPhoneX
+// $Nexus7_land_960w: 60.00em; //960px wide
+$iPad_iPadMini-Land-Desktop: 64.000em; //1024px
+$laptopTouch_1280: 80.000em; //1280px
+$Wide-Desktop: 90em; //1440px
+$ExtraLarge-Desktop: 100em; //1600px
+
+
+
+@media (min-width:320px) { /* smartphones, iPhone, portrait 480x320 phones */ }
+@media (min-width:360px) { /* GalaxySIII*/ }
+@media (min-width:375px) { /* iPhone-6-8-Portrait*/ }
+@media (min-width:414px) { /* iPhone-6-8-PLUS-Portrait*/ }
+@media (min-width:481px) { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
+@media (min-width:641px) { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
+@media (min-width:961px) { /* tablet, iPadPRO, landscape iPad, lo-res laptops ands desktops */ }
+@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
+@media (min-width:1281px) { /* hi-res laptops and desktops */ }
+
+@media (min-width:540px)   
+and(min-height: 720px){ /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide.*/ }
+
+@media (min-width:800px)
+and(min-height: 600px){ /* NEST HUB by GOOGLE */}
+
+@media (min-width:1024px)
+and(min-height: 1280px){ /* Nexxus10 and Kindle Portrait */}
+
+body, ul, h1, h2, h3, h4, h5, p, div, img, li {
+	margin: 0;
+    padding: 0;
+    font-size: 16px;
+	box-sizing: border-box; 
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+}
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+	font-size: 10px;
+}
+
+.mainbody {
+    width: 100%;
+    height: 100vh;
+    font-size: 1.6rem;
+    color: #223344;
+}
+
+.menuBar {
+    width: 100%;
+    height: 45px;
+    background-color: #2E3191;
+    color: #FFFFFF;
+    // padding: 1.5rem;
+    //sticky menu bar for mobile and tablet
+    top: 0;
+    position: fixed;
+    padding: 1.5rem;
+
+    @media (min-width:360px) { /* GalaxySIII*/ 
+        height: 50px;
+    }
+    @media (min-width:481px) { // portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. 
+        height: 60px;
+    }
+    @media (min-width:961px) { /* tablet, landscape iPad, lo-res laptops ands desktops */ 
+        display: flex;
+        justify-content: space-between;
+        padding: 2rem;
+    }
+}
+.menu-text {
+    display: none;
+    vertical-align: top;
+    font-size: 2rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+
+    @media (min-width:961px) { /* tablet, landscape iPad, lo-res laptops ands desktops */ 
+        display: inline-block;
+    }
+}
+.desktop-Phone {
+    display: block; 
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+
+    @media (min-width:641px) { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
+        font-size: 2.5rem;
+    }
+
+    @media (min-width:961px) { /* tablet, landscape iPad, lo-res laptops ands desktops */ 
+        display: inline-block;
+        vertical-align: top;
+        font-size: 2rem;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
+    }
+}
+
+h1 {
+    display: none;
+}
+
+.emptyHeight {
+    height: 45px;
+    width: 100%;
+
+    @media (min-width:360px) { /* GalaxySIII*/ 
+        height: 50px;
+    }
+    @media (min-width:481px) { // portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. 
+        height: 60px;
+    }
+    @media (min-width:641px) { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
+    
+    }
+}
+
+.backgroundTop {
+    background-image: url("..//images/LuminousLagoonBkg.jpg");
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: top;
+    width: 100%;
+    height: calc(100vh - 50px);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 2rem;
+
+    @media (min-width:320px)
+        and(min-height: 568px){ //iPhone 5
+    }
+    @media (min-width:414px) { //iPhone-6-8-PLUS-Portrait
+        padding: 4rem;
+    }
+    @media (min-width:540px)  // portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. 
+    and(min-height: 720px){
+        padding: 2rem;
+    }
+    @media (min-width:961px) { /* tablet, landscape iPad, lo-res laptops ands desktops */ 
+        padding: 4rem;
+    }
+    @media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ 
+         
+    }
+}
+
+.logo {
+    width: 10rem;
+    margin: 0 auto;
+    display: block;
+
+    @media (min-width:360px) { //GalaxySIII
+        width: 12.5rem;
+    }
+    @media (min-width:414px) { //iPhone-6-8-PLUS-Portrait
+        width: 14rem;
+    }
+    @media (min-width:360px) 
+    and (min-height:812px) { 
+        width: 18rem;
+    }
+    @media (min-width:540px)  // portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. 
+    and(min-height: 720px){
+        width: 11rem;
+    }
+    @media (min-width:641px) { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
+        width: 18rem;
+    }
+    @media (min-width:800px)
+    and(min-height: 1280px){ //Nexxus10 and Kindle Portrait
+        width: 22rem;
+    }
+    @media (min-width:961px) { /* tablet, iPadPRO, landscape iPad, lo-res laptops ands desktops */ 
+        width: 14rem;
+    }
+}
+
+h2 {
+    // font-family: 'Lobster', cursive;
+    font-size: 3rem;
+    text-shadow: 3px 3px #000000;
+    // font-family: 'Mansalva', cursive;
+    // font-family: 'Cookie', cursive;
+    // font-family: 'Pacifico', cursive;
+    
+    font-family: 'Rancho', cursive;
+    // font-family: astounder-squared-lc-bb, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #FFFFFF;
+
+    @media (min-width:360px) { //GalaxySIII
+        font-size: 3.2rem;
+    }
+    @media (min-width:414px) { //iPhone-6-8-PLUS-Portrait
+        font-size: 3.8rem;
+    }
+    @media (min-width:481px) { // portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. 
+        font-size: 4rem;
+    }
+    @media (min-width:641px) { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
+        font-size: 4.4rem;
+    }
+    @media (min-width:800px)
+    and(min-height: 1280px){ //Nexxus10 and Kindle Portrait
+        font-size: 5rem;
+    }
+    @media (min-width:961px) { /* tablet, landscape iPad, lo-res laptops ands desktops */ 
+        font-size: 5.5rem;
+        padding: 0 0 1rem;
+    }
+}
+
+h3 {
+    font-family: 'Rancho', cursive;
+    // font-family: astounder-squared-lc-bb, sans-serif;
+    font-size: 2.5rem;
+    margin: 0rem auto 1rem;
+    color: #ff8700;
+    text-align: center;
+    font-weight: 400;
+
+    @media (min-width:360px) { //GalaxySIII
+        font-size: 3.1rem;
+    }
+    @media (min-width:481px) { // portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. 
+        font-size: 4.8rem;
+    }
+}
+
+h4 {
+    color: #ff8700;
+    font-size: 1.7rem;
+    text-align: center;
+
+    @media (min-width:360px) { //GalaxySIII
+        font-size: 2rem;
+    }
+    @media (min-width:481px) { // portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. 
+        text-align: center;
+    }
+    @media (min-width:961px) { /* tablet, landscape iPad, lo-res laptops ands desktops */ 
+        font-size: 3rem;
+    }
+}
+
+h5 {
+    font-size: 1.3rem;
+    line-height: 2;
+    font-weight: 500;
+    text-align: center;
+
+    @media (min-width:360px) { //GalaxySIII
+        font-size: 1.5rem;
+    }
+    @media (min-width:540px)  // portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. 
+    and(min-height: 720px){
+        
+    }
+}
+
+.center-image {
+    width: 15rem;
+    margin: 0 auto;
+    box-shadow: 0 0 50px #2266EE;
+
+    @media (min-width:360px) { //GalaxySIII
+        width: 20rem;
+    }
+    @media (min-width:414px) { //iPhone-6-8-PLUS-Portrait
+        width: 22.2rem;
+    }
+    @media (min-width:360px) 
+    and (min-height:812px) { 
+        width: 28rem;
+    }
+    @media (min-width:481px) { // portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. 
+        width: 35rem;
+    }
+    @media (min-width:540px)  // portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. 
+    and(min-height: 720px){
+        width: 25rem;
+    }
+    @media (min-width:641px) { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
+        width: 35rem;
+    }
+    @media (min-width:800px)
+    and(min-height: 1280px){ //Nexxus10 and Kindle Portrait
+        width: 48rem;
+    }
+    @media (min-width:961px) { /* tablet, iPadPRO, landscape iPad, lo-res laptops ands desktops */ 
+        width: 42rem;
+   }
+}
+
+.phoneBlock {
+    width: 24rem;
+    color: #FFFFFF;
+    background-color: #ff8700;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    order: 3;
+    text-align: center;
+    border-radius: 50px;
+    margin: 0 auto;
+    padding: .5rem;
+
+    @media (min-width:360px) { //GalaxySIII
+        width: 24rem;
+        padding: 1rem;
+    }
+    @media (min-width:414px) { //iPhone-6-8-PLUS-Portrait
+        width: 22.2rem;
+    }
+    @media (min-width:360px) 
+    and (min-height:812px) { 
+        width: 28rem;
+    }
+    @media (min-width:481px) { // portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. 
+        width: 35rem;
+    }
+    @media (min-width:540px)  // portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. 
+    and(min-height: 720px){
+        width: 25rem;
+    }
+    @media (min-width:641px) { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
+        width: 35rem;
+    }
+    @media (min-width:800px)
+    and(min-height: 1280px){ //Nexxus10 and Kindle Portrait
+        width: 48rem;
+    }
+    @media (min-width:961px) { /* tablet, iPadPRO, landscape iPad, lo-res laptops ands desktops */ 
+         display: none;
+    }
+}
+
+.whatsapp {
+    font-size: 1.5rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    line-height: 1.5;
+
+    @media (min-width:481px) { // portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. 
+        font-size: 2rem;
+    }
+    @media (min-width:540px)  // portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. 
+    and(min-height: 720px){
+        font-size: 1.7rem;
+    }
+    @media (min-width:641px) { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
+        font-size: 2rem;
+    }
+    @media (min-width:800px)
+    and(min-height: 1280px){ //Nexxus10 and Kindle Portrait
+        font-size: 2.5rem;
+    }
+}
+.tel-Number {
+    font-size: 2.4rem;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    line-height: 1.2;
+
+    @media (min-width:481px) { // portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. 
+        font-size: 3.2rem;
+    }
+    @media (min-width:540px)  // portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. 
+    and(min-height: 720px){
+        font-size: 2rem;
+    }
+    @media (min-width:641px) { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
+        font-size: 3.2rem;
+    }
+    @media (min-width:800px)
+    and(min-height: 1280px){ //Nexxus10 and Kindle Portrait
+        font-size: 3rem;
+    }
+}
+
+.bodyText {
+    background-color: #1b2f54;
+    width: 100%;
+    padding: 2rem;
+
+    @media (min-width:961px) { /* tablet, iPadPRO, landscape iPad, lo-res laptops ands desktops */ 
+        padding: 8rem 8rem 0;
+    }
+}
+
+.inner-bodyText {
+    width: 100%;
+    background-color: #FFFFFF;
+    padding: 1.5rem;
+    margin: 0 auto;
+
+    @media (min-width:360px) { //GalaxySIII
+        padding: 2rem;
+    }
+    @media (min-width:481px) { // portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. 
+        padding: 4rem;
+    }
+    @media (min-width:961px) { /* tablet, iPadPRO, landscape iPad, lo-res laptops ands desktops */ 
+        width: 50%;
+        padding: 4rem;
+    }
+    
+    p {
+        font-size: 1.4rem;
+        line-height: 1.3;
+        text-align: justify;
+        hyphens: auto;
+
+        @media (min-width:641px) { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
+            font-size: 16px;
+            text-align: justify;
+        }
+    }
+}
+
+.item {
+    width: 100%;
+    display: block;
+    padding: 0.75rem 0 0 0;
+}
+
+.tour-photo-fish {
+    width: 100%;
+    height: 30rem;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../images/DESMOND_HOLDING_FISH_rev.jpg");
+
+    @media (min-width:481px) { // portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. 
+         
+    }
+       
+
+    @media (min-width:961px) { /* tablet, iPadPRO, landscape iPad, lo-res laptops ands desktops */ 
+        height: 60rem;
+    }
+}
+
+.lagoon_tour {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.1rem;
+    
+
+    img {
+        width: 48%;
+        height: 48%;
+    }
+}
+
+.lagoon-combo {
+    width: 14.5rem;
+    height: 14.5rem;
+    background-position: center;
+    margin: 0 0 .5rem 0;
+}
+
+.description {
+    width: 100%;
+    display: block;
+    height: auto;
+    margin: 1rem 0 1rem 0;
+}
+
+.blueText {
+    color: #2266ee;
+}
+
+.margin-top-h4 {
+    margin-top: 4rem;
+}
+
+.list-section {
+    margin: 0 auto;
+    text-align: center;
+
+    @media (min-width:481px) { // portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. 
+        width: 33rem;
+        padding: .5rem 0;
+    }
+    @media (min-width:961px) { /* tablet, iPadPRO, landscape iPad, lo-res laptops ands desktops */ 
+        width: 40rem;
+    }
+}
+
+ul {
+    padding: .5rem 0 1rem 2rem;
+    text-align: left;
+
+    @media (min-width:360px) { //GalaxySIII
+        width: 99%;
+        margin: 0 auto;
+    }
+    @media (min-width:375px) { /* iPhone-6-8-Portrait*/ 
+        width: 100%;
+    }
+}
+
+li {
+    font-size: 1.4rem;
+    line-height: 1.3;
+
+    @media (min-width:641px) { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
+        font-size: 16px;
+    }
+}
+
+footer {
+    padding: 2rem;
+    background-color: #2E3191;
+    color: #FFFFFF;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+
+    p {
+        line-height: 1.2;
+        font-size: 1.4rem;
+
+        @media (min-width:375px) { /* iPhone-6-8-Portrait*/ 
+            font-size: 1.6rem;
+        }
+
+        @media (min-width:641px) { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
+            line-height: 1.5;
+        }
+    }
+}
