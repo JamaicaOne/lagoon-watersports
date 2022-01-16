@@ -70,19 +70,19 @@ img {
     }
 }
 
-.menuBar a p:hover {
-    color: #3366ff;
-}
-.menuBar a:visited {
-    color: #FFFFFF;
-}
-.menuBar a p:active {
-    // color: #0040ff;
-}
+// .menuBar p:hover {
+//     color: #3366ff;
+// }
+// .menuBar a:visited {
+//     color: #FFFFFF;
+// }
+// .menuBar a p:active {
+//     // color: #0040ff;
+// }
 
-.menuBar a {
-    text-decoration: none;
-}
+// .menuBar a {
+//     text-decoration: none;
+// }
 
 .menu-text {
     display: none;
@@ -139,9 +139,6 @@ h1 {
    
     @media (min-width:481px) { // portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. 
         height: 60px;
-    }
-    @media (min-width:641px) { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
-    
     }
 }
 
@@ -531,10 +528,6 @@ section {
         height: 1050px;
     }
 
-    // .inner-bodyText {
-    //     color: #FFFFFF;
-    // }
-
     h4 {
         color: #000000;
     }
@@ -589,7 +582,6 @@ section {
     h4, h3 {
         color: #FFFFFF;
     }
-    
 }
 
 .transport .one-image-tour {
@@ -651,7 +643,6 @@ li {
 
 .ovalBoxPhone {
     text-align: center !important;
-    cursor: pointer;
     width: 80%;
     padding: 1rem;
     background-color:#ff8700;
@@ -675,20 +666,6 @@ li {
     }
 }
 
-.else a {
-    text-align: center;
-    text-decoration: none;
-    color: #FFFFFF;
-
-    &:hover, &:visited, &:active {
-        text-decoration: none;
-        color: #FFFFFF;
-    }
-    &:hover {
-        color: #3366ff;
-    }
-}
-
 footer {
     padding: 2rem;
     background-color: #2E3191;
@@ -699,7 +676,6 @@ footer {
     @media (min-width:641px) { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
         padding: 4rem 2rem;
     }
-
     @media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ 
         padding: 6rem 2rem;
     }
