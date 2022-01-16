@@ -99,15 +99,12 @@ img {
 .top-Phone {
     display: block; 
     text-align: center;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
 
-    @media (min-width:320px){ 
-        font-size: 1.8rem;
-    }
     @media (min-width:360px){ 
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
     @media (min-width:600px)
         and (min-height:960px){ 
@@ -284,7 +281,7 @@ h4 {
     font-weight: 700;
     text-align: center;
 
-    @media (min-width:375px) {
+    @media (min-width:414px) {
         font-size: 1.6rem;
     }
     @media (min-width:961px) { /* tablet, landscape iPad, lo-res laptops ands desktops */ 
